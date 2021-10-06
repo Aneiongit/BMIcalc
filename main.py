@@ -13,11 +13,10 @@ age = int(input('Please provide your age: '))
 # Basal Metabolic Rate calculation
 def BMRW():
     BMRW = 10 * weight + 6.25 * height - 5 * age - 161  # for women
-    print(f"Your daily calories intake: {BMRW}")
+
 
 def BMRM():
     BMRM = 10 * weight + 6.25 * height - 5 * age + 5  # for men
-    print(f"Your daily calories intake: {BMRM}")
 
 
 # BMI calculation
@@ -34,8 +33,8 @@ elif 25 >= BMI < 30:
 elif BMI >= 30:
     print(" obese.")
 
-BMRW()
-BMRM()
+print(f"Your daily calories intake: {BMRW}")
+print(f"Your daily calories intake: {BMRM}")
 
 # opcja trybu zycia do obliczenia zapotrzebowania kalorycznego
 print('\nAby obliczyc zapotrzebowanie, wybierz jeden z ponizszych trybow zycia: ')
@@ -48,8 +47,8 @@ print('2.0: Praca fizyczna ciężka, regularne ćwiczenia 7razy w tygodniu')
 tryb = input('\nWybierz tryb zycia: ')
 
 # obliczanie zapotrzebowania kalorycznego dla mezczyzny i kobiety
-zapotrzebowanieK = (BMRW()*float(tryb))
-zapotrzebowanieM = (BMRM()*float(tryb))
+zapotrzebowanieK = ((BMRW())*float(tryb))
+zapotrzebowanieM = ((BMRM())*float(tryb))
 print("\nDziennie zapotrzebowanie kaloryczne dla kobiety:", zapotrzebowanieK, 'kalorii.')
 print("\nDziennie zapotrzebowanie kaloryczne dla mezczyzny:", zapotrzebowanieM, 'kalorii.')
 
