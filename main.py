@@ -1,3 +1,10 @@
+# Basal Metabolic Rate calculation
+def BMRW():
+    BMRW = 10 * weight + 6.25 * height - 5 * age - 161  # for women
+
+def BMRM():
+    BMRM = 10 * weight + 6.25 * height - 5 * age + 5  # for men
+
 # title
 print('\nCalorie calculator :)\n')
 
@@ -20,11 +27,9 @@ elif BMI >= 25 and BMI < 30:
 elif BMI >= 30:
     print(" obese.")
 
-# Basal Metabolic Rate calculation
-BMRW = 10 * weight + 6.25 * height - 5 * age - 161  # for women
-BMRM = 10 * weight + 6.25 * height - 5 * age + 5  # for men
-print("\nBasal metabolic rate for women: ", BMRW)
-print("\nBasal metabolic rate for men: ", BMRM)
+
+print(BMRW())
+print(BMRM())
 
 # opcja trybu zycia do obliczenia zapotrzebowania kalorycznego
 print('\nAby obliczyc zapotrzebowanie, wybierz jeden z ponizszych trybow zycia: ')
